@@ -23,12 +23,6 @@ fun Project.configureKotlin(
         if (!project.isJvmAndroidModule()) {
             js(IR) {
                 nodejs()
-                browser {
-                    testTask {
-                        // disable browser tests, as nodejs is enough
-                        enabled = false
-                    }
-                }
                 binaries.library()
             }
 
